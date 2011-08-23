@@ -1,0 +1,6 @@
+#!/bin/bash
+links[0]=$(phantomjs amazon.js)
+links[1]=$(phantomjs newegg.js)
+links[2]=$(phantomjs hp.js)
+echo ${links[@]}
+php /home/jaibapna/WebCrawler/mail.php "${links[@]}"
